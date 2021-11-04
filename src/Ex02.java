@@ -24,7 +24,6 @@ class Phone {
 
 class PhonBook {
     Scanner sc = new Scanner(System.in);
-    Phone array[] = new Phone[100];
     static int num;
 
     public void input() {
@@ -41,24 +40,22 @@ class PhonBook {
             array[i].setTel(tel);
         }
         System.out.println("저장되었습니다...");
+        Loop1:
         for (int i = 0; ; i++) {
             System.out.print("검색할 이름 >>");
             String name2 = sc.next();
             if (stop.equals(name2)) {
                 break;
             }
-            else if(name2.equals(array[1].getName())){
-                System.out.println(name2+"의 번호는 "+array[1].getTel()+" 입니다.");
+
+            Loop2:
+            for (int j = 1; j <= num; j++) {
+                if (name2.equals(array[j].getName())) {
+                    System.out.println(name2 + "의 번호는 " + array[j].getTel() + " 입니다.");
+                    continue Loop1;
+                }
             }
-            else if(name2.equals(array[2].getName())){
-                System.out.println(name2+"의 번호는 "+array[2].getTel()+" 입니다.");
-            }
-            else if(name2.equals(array[3].getName())){
-                System.out.println(name2+"의 번호는 "+array[3].getTel()+" 입니다.");
-            }
-            else{
-                System.out.println(name2+"이 없습니다.");
-            }
+            System.out.println(name2 + "이 없습니다.");
         }
     }
 }
