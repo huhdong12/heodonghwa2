@@ -20,7 +20,7 @@ class Solution {
     }
 }
 
-public class P01 {
+public class P06 {
     public static void main(String[] args) {
         int[] arr = { 100, 3, 45, 67, 210, 88 };
         System.out.println(Solution.minValue(arr));

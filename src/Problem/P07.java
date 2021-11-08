@@ -20,7 +20,7 @@ class Answer {
     }
 }
 
-public class P02 {
+public class P07 {
     public static void main(String[] args) {
         int[][] arr = { { 11, 21, 31 }, { 44, 55, 77 } };
         Answer.addTwoDArr(arr, 12);

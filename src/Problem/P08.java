@@ -1,6 +1,6 @@
 package Problem;
 
-public class P03 {
+public class P08 {
     public static void change(int[][] arr) {
         int[] last = arr[arr.length - 1];
         for (int z = arr.length - 1; z > 0; z--) {
